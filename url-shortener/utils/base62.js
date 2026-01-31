@@ -10,5 +10,6 @@ exports.encode = (num) => {
         result = chars[num % 62] + result;
         num = Math.floor(num / 62);
     }
+    console.log("Generated short code:", result);
     return result;
 }
