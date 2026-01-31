@@ -1,0 +1,50 @@
+System Design
+- process of defining the architecture, components and interfaces of a system to meet specific business requirements.
+
+Core concepts of System Design:
+1. Scalability: ability of a system to handle increasing amount of work by adding resources
+  - Vertical scaling: Adding more CPU, RAM to an existing machine
+  - Hortizonal scaling: Adding more machines to your network
+2. Load Balancing: Distributing incoming network traffic across multiple servers to ensure no single server is overloaded
+3. Availability vs Consistency: According to CAP theorem, a distributed system can only guarantee two out of three: Consistency, Availability and Partition
+4. Caching: Storing copies of data in high-speed storage like Redis
+5. Polyglot Persitence: Selecting one database based on application's requirement
+
+Architectural Patterns:
+1. Monolithic: Single, unified codebase. Simple to develop but difficult to scale
+2. Microservices: Small, Independent services that communicate via APIs. This is used for large-scale application development
+3. Event-Driven: Uses events (like order-placed, payment successfull) to trigger actions across different services, using tools like Kafka
+
+
+HLD - High Level Design: drawing a board diagram of server, database and caches
+LLD - Deep dive into specific database schemas, API endpoints, class structures
+
+=============================
+
+URL Shortener
+1. Setup a backend project using Node
+2. Create a proper project structure with MVC
+3. Write a simple Express server
+
+CAP Theorem
+Caching
+Distributed Systems
+High Availability
+Event Pipelines
+Database indexing
+Load Balancing
+
+Functional Requirements
+- Shorten a long URL
+- Redirect Short URL -> original URL
+- Click Count / analytics
+
+Non-Functional Requirements
+- Fast Redirect
+- High Availability
+- Scalable to millions of URLs
+
+Components:
+1. Client - Front-end - Postman
+2. Backend API 
+3. Database - Mongo + Redis
